@@ -4,25 +4,30 @@
 
 bool Check[100001] = {0};
 
-long long involution(int a, int b) {
-	if (b == 0) {
-		return 1;
-	}
-	else if (b == 1) {
-		return a;
-	}
-	long long tmp = involution(a, b / 2);
-	if (b % 2) {
-		return tmp * tmp * a;
-	}
-	else {
-		return tmp * tmp;
-	}
+long long involution(int a, int b)
+{
+  if (b == 0)
+  {
+    return 1;
+  }
+  else if (b == 1)
+  {
+    return a;
+  }
+  long long tmp = involution(a, b / 2);
+  if (b % 2)
+  {
+    return tmp * tmp * a;
+  }
+  else
+  {
+    return tmp * tmp;
+  }
 }
 
-int CheckCipher(int a)
+long long CheckCipher(int a)
 {
-  int cipher = 0;
+  long long cipher = 0;
   while (a > 0)
   {
     cipher++;
@@ -34,22 +39,21 @@ int CheckCipher(int a)
 
 int main()
 {
-  int n = 0, k = 0, remind = 0;
+  int n = 0, k = 0;
   std::cin >> n >> k;
   long long cipher = CheckCipher(n); // n의 자리수
-  remind = n % k;                     //우선 나머지 계산
-  int cnt = 1;                        //카운트 초기값 1
-  while (remind != 0)                 //나누어 떨어지지 않을 경우 실행
+  int remind = n % k;                    //우선 나머지 계산
+  int cnt = 1;                       //카운트 초기값 1
+  while (remind != 0)                //나누어 떨어지지 않을 경우 실행
   {
-    Check[remind] = true;
-    long long m = remind * cipher + n;                                         // N의 연속숫자
-    remind = m % k;
+    remind = (remind * cipher + n) % k;
 
-    if (Check[remind]) //나머지가 중복되어 사이클이 될 경우
+    if (Check[remind]) //나머지가 중복되어 사이클이 발생할 경우
     {
       cnt = -1;
       break;
     }
+    Check[remind] = true;
     cnt++;
   }
 
