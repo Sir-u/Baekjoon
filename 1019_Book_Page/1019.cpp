@@ -9,7 +9,29 @@
 
 #include <iostream>
 
-int main(){
+int count[10]={ 0 ,};
 
+int NinePlus(int a)
+{
+    while (a % 10 != 9)
+    {
+        a++;
+    }
+
+    return a;
 }
 
+int NumberCount(int a, int b)
+{
+    a /= 10;
+    b /= 10;
+    return a - b + 1;
+}
+
+int main()
+{
+    int n;
+    
+    
+    
+}
