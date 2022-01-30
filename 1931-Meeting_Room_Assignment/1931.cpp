@@ -13,8 +13,28 @@
 //첫째 줄에 최대 사용할 수 있는 회의의 최대 개수를 출력한다.
 
 #include <iostream>
+#include <vector>
+//using namespace std;
+
+void QuickSort()
+{
+    
+}
 
 int main()
 {
-    int n; // MeetingNumber
+    int n=0; // MeetingNumber
+    std::cin >> n;
+    
+    std::vector<int> first_time(n);
+    std::vector<int> last_time(n);
+    
+
+    for(int i=0; i<n; i++){
+        std::cin >> first_time[i] >> last_time[i];
+    }
+
+     for(int i=0; i<n; i++){
+        std::cout << first_time[i] << last_time[i];
+    }
 }
