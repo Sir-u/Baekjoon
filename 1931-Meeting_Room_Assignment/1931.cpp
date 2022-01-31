@@ -16,6 +16,12 @@
 #include <vector>
 //using namespace std;
 
+typedef struct _nTime{
+    int first_time;
+    int last_time;
+}nTime;
+
+
 void QuickSort()
 {
     
@@ -24,17 +30,19 @@ void QuickSort()
 int main()
 {
     int n=0; // MeetingNumber
+    int a=0, b=0;
     std::cin >> n;
-    
-    std::vector<int> first_time(n);
-    std::vector<int> last_time(n);
+
+
     
 
     for(int i=0; i<n; i++){
-        std::cin >> first_time[i] >> last_time[i];
+        std::cin >> a >> b;
+        
+        
     }
 
      for(int i=0; i<n; i++){
-        std::cout << first_time[i] << last_time[i];
+        
     }
 }
