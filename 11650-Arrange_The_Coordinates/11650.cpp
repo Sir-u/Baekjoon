@@ -11,9 +11,26 @@
 // 첫째 줄부터 N개의 줄에 점을 정렬한 결과를 출력한다.
 
 #include <iostream>
+#include <vector>
+
+void nSort(int* a, int* b)
+{
+    
+}
 
 int main()
 {
     int n;
+    std::vector<int> a;
+    std::vector<int> b;
+
+    std::cin >> n;
+    
+    for (int i = 0; i < n; i++)
+    {
+        std::cin >> a[i] >> b[i];
+    }
+    
+    
     
 }
