@@ -20,7 +20,7 @@ int main(void)
 {
     int hour = 0, min = 0, plus = 0;
 
-    std::cin >> hour >> min;
+    std::cin >> hour >> min;    
     std::cin >> plus;
 
     min += plus;

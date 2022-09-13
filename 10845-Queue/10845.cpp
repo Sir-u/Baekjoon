@@ -58,5 +58,4 @@ int main(void){
         if(order == "front") Front();
         if(order == "back") Back();
     }
-    
 }

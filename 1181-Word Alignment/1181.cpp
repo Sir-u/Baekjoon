@@ -10,3 +10,25 @@
 // 출력
 // 조건에 따라 정렬하여 단어들을 출력한다. 단, 같은 단어가 여러 번 입력된 경우에는 한 번씩만 출력한다.
 
+#include <iostream>
+#include <string>
+
+
+
+
+int main(void){
+    int n;
+        
+    std::cin >> n;
+    std::string Arr[n];
+
+    for(int i=0; i<n; i++){
+        std::cin >> Arr[i];
+    }
+
+    for(int i=0; i<n; i++){
+        std::cout << Arr[i].length() << std::endl;
+    }
+    
+
+}
