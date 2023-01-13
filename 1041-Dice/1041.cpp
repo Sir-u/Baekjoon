@@ -38,8 +38,6 @@ int MinIndex(long long dice[], int min, int n)
     return minIdx
 }
 
-
-
 int main()
 {
     long long int n, a, b, c;
@@ -56,7 +54,7 @@ int main()
 
     int minIdx = MinIndex(dice, min, 6);
 
-    if(minIdx = 0
+    if(minIdx = 0)
 
 
     //cout << "min index: " << minIdx << endl;
